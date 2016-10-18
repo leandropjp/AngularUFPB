@@ -1,0 +1,27 @@
+{
+  "name": "y",
+  "description": "y",
+  "main": "y",
+  "authors": [
+    "y"
+  ],
+  "license": "y",
+  "keywords": [
+    "y"
+  ],
+  "homepage": "y",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "vaadin-date-picker": "^1.1.4",
+    "paper-elements": "^1.0.7",
+    "vaadin-combo-box": "^1.1.5",
+    "moment": "^2.15.1"
+  }
+}

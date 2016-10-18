@@ -1,0 +1,11 @@
+<div mdl class="demo-layout mdl-layout mdl-js-layout  mdl-layout--fixed-header mdl-layout--fixed-drawer">
+<header mdl id="drawer"  class="demo-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
+<router-outlet name="header"></router-outlet>
+</header>
+<div mdl class="demo-drawer mdl-layout__drawer mdl-color-text--blue-grey-50">
+<router-outlet name="sidenav"></router-outlet>
+</div>
+<main class="mdl-layout__content mdl-color--grey-100">
+		<router-outlet></router-outlet>
+</main>
+</div>

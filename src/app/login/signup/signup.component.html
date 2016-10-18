@@ -1,0 +1,57 @@
+
+	<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--4-offset" style="display: flex;
+	align-items: center;
+	justify-content: center;">
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+				<form [formGroup]="myForm" (ngSubmit)="onSignup()">
+					<div class="mdl-card__title demo-card-title">
+						<h2 class="mdl-card__title-text">Criar Conta</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<div class="mdl-grid demo-social">
+							<div class="mdl-cell mdl-cell--4-col demo-cell-social"><i (click)="loginFace()" style="padding: 0px 5px 0px 15px" class="fa fa-facebook-square fa-4x icon-facebook" aria-hidden="true"></i></div>
+							<div class="mdl-cell mdl-cell--4-col"><i (click)="loginGoogle()" style="padding: 0px 5px 0px 15px" class="fa fa-google-plus-square fa-4x icon-gplus" aria-hidden="true"></i></div>
+							<div class="mdl-cell mdl-cell--4-col"><i (click)="loginTwitter()" style="padding: 0px 5px 0px 15px" class="fa fa-twitter-square fa-4x icon-twitter" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<div class="form-group">
+								<input class="mdl-textfield__input form-control" type="text" id="name" formControlName="name">
+								<label class="mdl-textfield__label" for="name">Nome</label>
+							</div>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<div class="form-group">
+								<input class="mdl-textfield__input form-control" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" formControlName="email" type="email" id="email" #email >
+								<label class="mdl-textfield__label" for="email">Email</label>
+								<span class="mdl-textfield__error">Formato de email inválido!</span>
+							</div>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<div class="form-group">
+								<input class="mdl-textfield__input form-control" formControlName="password" type="password" id="password">
+								<label class="mdl-textfield__label" for="password">Senha</label>
+							</div>
+							
+						</div>
+						<!-- <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
+							<div class="form-group">
+								<input class="mdl-textfield__input" type="text" id="sample3">
+								<label class="mdl-textfield__label" for="sample3">Confirmar Senha</label>
+							</div>
+							
+						</div> -->
+					</div>
+					
+					<div class="demo-action mdl-card__actions mdl-card--border">
+						<button type="submit" [disabled]="!myForm.valid" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+							Criar Conta
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+		
+	</div>

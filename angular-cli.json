@@ -9,7 +9,7 @@
       "outDir": "dist",
       "assets": "assets",
       "index": "index.html",
-      "main": "main.ts",
+      "main": "main-polymer.ts",
       "test": "test.ts",
       "tsconfig": "tsconfig.json",
       "prefix": "app",
@@ -17,7 +17,11 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "app/selectfield/textfield.js",
+        "assets/bower_components/moment/min/moment.min.js",
+        "assets/bower_components/moment/locale/pt-br.js"
+      ],
       "environments": {
         "source": "environments/environment.ts",
         "dev": "environments/environment.ts",

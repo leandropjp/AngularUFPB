@@ -1,0 +1,52 @@
+
+<div class="mdl-grid">
+		<div class="mdl-cell mdl-cell--4-col mdl-color--grey-100">6</div>
+		<div class="mdl-cell mdl-cell--4-col mdl-color--grey-100" style="display: flex;
+	align-items: center;
+	justify-content: center;">
+			<div class="demo-card-wide mdl-card mdl-shadow--2dp">
+				<form [formGroup]="myForm" (ngSubmit)="onSignin()">
+					<div class="mdl-card__title demo-card-title">
+						<h2 class="mdl-card__title-text">Login</h2>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<div class="mdl-grid demo-social">
+							<div class="mdl-cell mdl-cell--4-col demo-cell-social"><i (click)="loginFace()" style="padding: 0px 5px 0px 15px" class="fa fa-facebook-square fa-4x icon-facebook" aria-hidden="true"></i></div>
+							<div class="mdl-cell mdl-cell--4-col"><i (click)="loginGoogle()" style="padding: 0px 5px 0px 15px" class="fa fa-google-plus-square fa-4x icon-gplus" aria-hidden="true"></i></div>
+							<div class="mdl-cell mdl-cell--4-col"><i (click)="loginTwitter()" style="padding: 0px 5px 0px 15px" class="fa fa-twitter-square fa-4x icon-twitter" aria-hidden="true"></i></div>
+						</div>
+					</div>
+					<div *ngIf="invalidUser()" class="mdl-card__supporting-text" style="text-align: center; color:#FF4C4C;">
+						<p> Usuário ou senha inválido.</p>
+					</div>
+					<div class="mdl-card__supporting-text">
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-control">
+							<div class="form-group">
+								<input class="mdl-textfield__input" type="text" id="email" formControlName="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" >
+								<label class="mdl-textfield__label" for="email">Email</label>
+								<span class="mdl-textfield__error">Formato de email inválido!</span>
+							</div>
+						</div>
+						<div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label form-control">
+							<div class="form-group">
+								<input class="mdl-textfield__input" type="password" id="password" formControlName="password">
+								<label class="mdl-textfield__label" for="password">Senha</label>
+							</div>
+							
+						</div>
+					</div>
+					<div class="demo-action mdl-card__actions">
+						<button type="submit" [disabled]="!myForm.valid" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored">
+						Entrar
+						</button>
+					</div>
+				</form>
+				<div class="demo-action mdl-card__actions mdl-card--border">
+					<a routerLink='signup' class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+						Criar Conta
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="mdl-cell mdl-cell--4-col mdl-color--grey-100">6</div>
+</div>

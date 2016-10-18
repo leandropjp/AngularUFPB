@@ -1,0 +1,37 @@
+.demo-content {
+	background: #000;
+}
+
+.demo-card-wide > .mdl-card__title {
+  color: #fff;
+  background-color: #000;
+}
+.demo-card-wide > .mdl-card__menu {
+  color: #000;
+}
+
+.demo-action {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.demo-card-title {
+  color: #fff;
+  background-color: #000;
+}
+
+.fa-stack-1x {
+    color:white;
+}
+.icon-facebook {
+   color:#3b5998;
+}
+
+.icon-twitter {
+    color:#00aced;
+}
+
+.icon-gplus{
+    color:#dd4b39;
+}	
