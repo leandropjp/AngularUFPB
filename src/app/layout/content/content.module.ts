@@ -3,8 +3,8 @@ import { CommonModule }   from '@angular/common';
 import { FormsModule }    from '@angular/forms';
 
 import { ContentComponent }    from './content.component';
-import { SigninComponent }    from '../signin/signin.component';
-import { SignupComponent }    from '../signup/signup.component';
+import { SigninComponent }    from '.../login/signin/signin.component';
+import { SignupComponent }    from '.../login/signup/signup.component';
 
 import { routing } from './content.routing';
 

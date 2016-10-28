@@ -22,6 +22,7 @@ import { LoginModule } from './login/login.module';
 import { LayoutModule } from './layout/layout.module';
 import { LOCALE_ID } from '@angular/core';
 
+
 export const firebaseConfig = {
   apiKey: 'AIzaSyB_SQySY7aFvUz5hpUbjznFkYB0w8TTpRY',
   authDomain: 'angularufpb.firebaseapp.com',

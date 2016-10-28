@@ -11,15 +11,20 @@ import { SelectfieldComponent } from './../selectfield/selectfield.component';
 import { PolymerElement } from '@vaadin/angular2-polymer';
 import { FormsModule } from '@angular/forms';
 import { MDLModule } from './../shared/shared.module';
-import { ScheduleModule } from './../shared/schedule.module';
+import { ScheduleComponent } from './../schedule/schedule.component';
+import { ScheduleModule, DialogModule, CalendarModule, ToggleButtonModule, DragDropModule, ButtonModule, 
+    InputTextareaModule, CheckboxModule, InputTextModule, SelectButtonModule } from 'primeng/primeng';
+
+
 
 
 
 @NgModule({
-    imports: [CommonModule, layoutroutes, FormsModule, MDLModule, ScheduleModule],
+    imports: [CommonModule, layoutroutes, FormsModule, MDLModule, ScheduleModule, DialogModule, CalendarModule, 
+    ToggleButtonModule, DragDropModule, ButtonModule, InputTextareaModule, CheckboxModule, InputTextModule, SelectButtonModule],
     exports: [],
     declarations: [HeaderNavComponent, SideNavComponent, LayoutComponent, ContentComponent, HomeComponent, 
-    ReservationcardComponent, SelectfieldComponent, PolymerElement('vaadin-date-picker')],
+    ReservationcardComponent, SelectfieldComponent, PolymerElement('vaadin-date-picker'), ScheduleComponent],
     providers: [],
     schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })

@@ -1,5 +1,4 @@
 import { Component, OnInit, OnDestroy, trigger, state, style, animate, transition } from '@angular/core';
-
 import { Router } from '@angular/router';
 // import { AuthService} from '../shared/auth.service';
 import { Category } from './../../Category';
@@ -30,6 +29,7 @@ import { Reservation } from './../../Reservation';
 })
 export class HomeComponent implements OnInit, OnDestroy {
   reservations: Reservation[];
+   events: any[];
   categories:Category[];
   rooms:Room[];
   constructor(private _firebaseService:FirebaseService, private router: Router ) {
@@ -48,6 +48,31 @@ export class HomeComponent implements OnInit, OnDestroy {
     this._firebaseService.getReservation().subscribe(reservations => {
       this.reservations = reservations;
     });
+
+    this.events = [
+            {
+                "title": "All Day Event",
+                "start": "2016-01-01"
+            },
+            {
+                "title": "Long Event",
+                "start": "2016-01-07",
+                "end": "2016-01-10"
+            },
+            {
+                "title": "Repeating Event",
+                "start": "2016-01-09T16:00:00"
+            },
+            {
+                "title": "Repeating Event",
+                "start": "2016-01-16T16:00:00"
+            },
+            {
+                "title": "Conference",
+                "start": "2016-01-11",
+                "end": "2016-01-13"
+            }
+        ];
 
   }
 
