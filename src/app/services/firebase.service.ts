@@ -7,11 +7,13 @@ import {Room} from '../Room';
 import { User } from '../shared/user.interface';
 import { Router } from '@angular/router';
 import { Reservation } from '../Reservation';
+import { MyEvent } from './myEvent';
 
 declare var firebase: any;
 @Injectable()
 export class FirebaseService {
-
+    
+    events: FirebaseListObservable<MyEvent[]>;
     categories: FirebaseListObservable<Category[]>;
     rooms: FirebaseListObservable<Room[]>;
     users: FirebaseListObservable<User[]>;
@@ -42,14 +44,6 @@ export class FirebaseService {
             }) as
             FirebaseListObservable<Reservation[]>;
         }
-        // console.log(this.reservations);
-        // this._af.database.object('startTime').subscribe((obj) => {
-        //   if (obj.$exists()) {
-        //     console.log(obj);
-        //   } else {
-        //    console.log('nda');
-        //   }
-        // });
         return this.reservations;
     }
     getRooms(category: string = null) {
@@ -67,6 +61,24 @@ export class FirebaseService {
         }
 
         return this.rooms;
+    }
+    
+    getEvents() {
+        this.events = this._af.database.list('/events') as FirebaseListObservable<MyEvent[]>;
+        return this.events;
+    }
+
+    addEvents(newEvent){
+        return this.events.push(newEvent);
+    }
+
+    updateEvents(key, updEvent){
+        console.log(updEvent);
+        return this.events.update(key, updEvent);
+    }
+
+    deleteEvents(key){
+        return this.events.remove(key);
     }
 
     getUser(userId: string = null) {
@@ -127,6 +139,7 @@ export class FirebaseService {
       this.isAuth = true;
       this.authColor = 'primary';
       this.activeUser.next(this._getUserInfo(user));
+      this.user = this._getUserInfo(user);
       
       this.router.navigate(['home']);
 

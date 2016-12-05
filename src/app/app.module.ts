@@ -55,7 +55,7 @@ firebase.initializeApp(firebaseConfig);
     AuthGuard,
     AuthService,
     FirebaseService,
-    { provide: LOCALE_ID, useValue: "pt-BR" }
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
   bootstrap: [AppComponent]
